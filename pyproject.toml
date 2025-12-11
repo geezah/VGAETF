@@ -20,13 +20,16 @@ required-environments = [
 
 [tool.uv.sources]
 torch = [
-  { index = "pytorch-cpu" },
+  { index = "pytorch" },
 ]
 dgl = [
-  { url = "https://data.dgl.ai/wheels/torch-2.1/dgl-2.2.0-cp38-cp38-manylinux1_x86_64.whl" }
+  { url = "https://data.dgl.ai/wheels/torch-2.1/cu121/dgl-2.2.1%2Bcu121-cp38-cp38-manylinux1_x86_64.whl" }
 ]
 
 [[tool.uv.index]]
-name = "pytorch-cpu"
-url = "https://download.pytorch.org/whl/cpu"
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
 explicit = true
+
+[dependency-groups]
+dev = []
